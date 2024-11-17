@@ -19,15 +19,10 @@ body {
     height: 100vh; /* Ajusta a altura conforme necessário */
     width: 35%; /* Largura do formulário */
     background-color: #ffffff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
     padding: 2%;
     text-align: center; /* Centraliza o conteúdo dentro do container */
-}
-
-h1 {
-    font-size: 24px; /* Tamanho maior para o título */
-    margin-bottom: 20px; /* Adiciona um espaço entre o título e o formulário */
-    color: #333;
+    z-index: 2; /* Coloca o formulário acima da imagem */
 }
 
 fieldset {
@@ -37,13 +32,16 @@ fieldset {
     justify-content: center; /* Centraliza os elementos no eixo vertical */
     width: 100%; /* Garante que o fieldset ocupe toda a largura do container */
     max-width: 600px; /* Limita a largura máxima do fieldset */
-    padding: 20px; /* Adiciona espaçamento interno */
+    padding: 15px; /* Adiciona espaçamento interno */
     border: none; /* Remove a borda padrão */
     margin-top: 20px; /* Remove a margem superior */
+    font-size: 24px; /* Tamanho maior para o título */
+    margin-bottom: 20px; /* Adiciona um espaço entre o título e o formulário */
+    color: #333;
 }
 
 .form-group {
-    margin-bottom: 20px; /* Aumenta o espaço entre os form-groups */
+    margin-bottom: 10px; /* Aumenta o espaço entre os form-groups */
     display: flex;
     flex-direction: column; /* Coloca o label em cima do input */
     align-items: flex-start; /* Alinha o conteúdo à esquerda */
@@ -61,6 +59,7 @@ input {
     padding: 15px; /* Aumenta o tamanho do input */
     margin-top: 5px;
     border: 1px solid #ccc;
+    color: #E7EAEE;
     border-radius: 10px;
     font-size: 16px;
     max-width: 100%; /* Garante que o input ocupe 100% da largura disponível */
@@ -84,28 +83,43 @@ button[type="submit"]:hover{
 
 /* Certifique-se de que a .register-container ocupe 100% da largura */
 .register-container {
-    display: flex; /* Habilita flexbox */
-    flex-direction: column; /* Organiza os itens de cima para baixo */
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    width: 35%; /* Largura do formulário */
-    background-color: #ffffff;
-    padding: 2%;
-    text-align: center; /* Centraliza o conteúdo dentro do container */
+    margin-bottom: 20px; /* Aumenta o espaço entre os form-groups */
+    display: flex;
+    flex-direction: column; /* Coloca o label em cima do input */
+    width: 50vh; /* Garante que o form-group ocupe toda a largura */
+
 }
 
+
 .register-button {
-    background-color: #68A797;
-    color: white;
+    background-color: white;
+    border: 2px solid #68A797;; /* Borda preta com 10px de espessura */
+    color: #68A797;
     padding: 15px;
     font-size: 18px;
-    border: none;
     border-radius: 10px;
     cursor: pointer;
     width: 100%; /* Garante que o botão ocupe toda a largura */
-    max-width: 100%; /* Limita a largura do botão */
 }
 
 .register-button:hover {
-    background-color: #4b8375;
+    background-color: #4b8375; /* Altera a cor de fundo quando o botão é hover */
+    color: #ffff; /* Muda a cor da fonte para branco no hover */
+    border:2px solid #4b8375; /* Muda a cor da borda para a mesma cor do fundo no hover */
+}
+
+
+.login-image-container {
+    display: flex;
+    
+}
+
+.login-wrapper {
+    display: flex;
+}
+
+.login-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
